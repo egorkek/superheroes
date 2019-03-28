@@ -1,0 +1,12 @@
+.Footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Footer img{
+    opacity: .2;
+    transition: opacity .5s linear;
+}
+.Footer .active img {
+    opacity: 1;
+}

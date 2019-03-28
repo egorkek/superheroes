@@ -1,0 +1,22 @@
+.Card{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 72px;
+    margin-top: 16px;
+}
+.Card img{
+    height: 100px;
+}
+.Card p{
+    margin: 4px;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+}
+@media (max-width: 321px) {
+    .Card img{
+        width: 64px;
+    }
+
+}

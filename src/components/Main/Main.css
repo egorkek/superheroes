@@ -1,0 +1,10 @@
+.Main{
+    background: linear-gradient(180deg, #31333B 13.26%, #363945 74.59%, #2B2D35 100%);
+    display: grid;
+    grid-row-gap: 26px;
+    grid-template-rows: 60px 1fr 80px;
+    max-height: 100%;
+}
+input::placeholder{
+    color: #FFFFFF;
+}

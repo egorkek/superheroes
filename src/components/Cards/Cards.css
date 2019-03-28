@@ -1,0 +1,21 @@
+.Cards{
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+.Cards img{
+    border-radius: 8px;
+    margin-right: 8px ;
+    padding: 0;
+}
+@media (min-width: 767px) {
+    .Cards{
+        display: grid;
+        grid-template-rows: auto;
+        grid-auto-columns: auto;
+    }
+
+
+
+}
