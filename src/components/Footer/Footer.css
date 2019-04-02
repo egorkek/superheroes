@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
 }
 .Footer img{
     opacity: .2;
@@ -9,4 +12,9 @@
 }
 .Footer .active img {
     opacity: 1;
+}
+@media (max-width: 321px) {
+    .Footer{
+        height: 96px;
+    }
 }

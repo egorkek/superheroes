@@ -34,7 +34,7 @@ module.exports ={
                 use: styleLoaders(),
             },
             {
-                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.svg$/, /\.png$/],
                 loader: require.resolve('url-loader'),
                 options: {
                     limit: 10000,

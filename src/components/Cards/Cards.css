@@ -1,21 +1,36 @@
 .Cards{
-    overflow: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
+    overflow: auto;
+    height: 80%;
+    width: 100%;
+    align-content: flex-start;
+    margin-left: 20px;
+}
+.Cards div{
+    flex: none;
 }
 .Cards img{
     border-radius: 8px;
-    margin-right: 8px ;
     padding: 0;
+    margin-right: 16px;
 }
-@media (min-width: 767px) {
+@media (max-width: 321px) {
     .Cards{
-        display: grid;
-        grid-template-rows: auto;
-        grid-auto-columns: auto;
+        height: 190px;
+        margin-bottom: 0;
     }
-
-
-
+    .Cards div{
+        display: inline;
+    }
+    .Cards img{
+        margin-right: 8px;
+    }
+}
+@media (max-width: 767px) {
+    .Cards{
+        margin-left: 0;
+        justify-items: center;
+        width: 99%;
+    }
 }

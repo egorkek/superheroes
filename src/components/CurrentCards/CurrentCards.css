@@ -1,0 +1,33 @@
+.CurrentCards{
+    height: 168px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow: auto;
+    width: 100vw;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #555761 -51.19%, #2B2D35 100%);;
+}
+.CurrentCards div{
+    width: 80px;
+    flex: none;
+    margin-right: 5px;
+}
+
+.CurrentCards :first-child{
+    margin-left: 20px;
+}
+.withoutCards{
+    height: 168px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #555761 -51.19%, #2B2D35 100%);;
+    align-items: center;
+    justify-content: center;
+}
+.withoutCards h1{
+    margin: auto;
+    color: #4B4E5C;
+    padding: 0;
+    font-size: 18px;
+}

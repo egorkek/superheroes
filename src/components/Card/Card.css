@@ -3,10 +3,12 @@
     flex-grow: 1;
     flex-direction: column;
     width: 72px;
-    margin-top: 16px;
+    margin-bottom: 16px;
 }
 .Card img{
     height: 100px;
+    width: 72px;
+    border-radius: 8px;
 }
 .Card p{
     margin: 4px;
@@ -16,7 +18,50 @@
 }
 @media (max-width: 321px) {
     .Card img{
-        width: 64px;
+        width: 72px;
+        margin: 0;
     }
-
+}
+.ForCurrentCards :first-child{
+    padding: 0;
+    margin-left: 15px;
+}
+.ForCurrentCards img{
+    margin-right: 16px;
+    height: 100px;
+}
+.ForCurrentCards :last-child{
+    margin-right: 0;
+}
+.ForCurrentCards{
+    padding: 0;
+    height: 100px;
+    margin-top: 10px;
+}
+.ForCurrentCards .close{
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: 8px;
+    left: 35px;
+    margin: 0;
+    padding: 0;
+}
+.ForCurrentCards .counter{
+    position: relative;
+    left: 6px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    background: #00C35A;
+    border-radius: 20px;
+    color: white;
+}
+.ForCurrentCards .counter *{
+    margin: 0;
+    padding: 0;
 }

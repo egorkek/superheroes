@@ -1,36 +1,38 @@
-.Input input{
+.Input{
     height: 56px;
     padding-left: 14px;
     background: #4B4E5C;
     border-radius: 8px;
-    border: none;
-    outline: none;
     font-size: 16px;
-    width: 336px;
-
-
+    width: 90vw;
+    margin-top: 16px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.Input:focus{
+.Input img{
+    padding-right: 20px;
+}
+.Input input{
+    font-size: 16px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: inherit;
+    border: none;
+}
+.Input input:focus{
     outline: none;
 }
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     .Input{
         display: flex;
         justify-content: center;
         padding: 0;
+        width: 336px;
+        margin-left: 20px;
     }
     .Input input{
         width: 85vw;
-    }
-}
-@media (max-width: 322px) {
-    .Input{
-        display: flex;
-        justify-content: center;
-        padding: 0;
-
-    }
-    .Input input{
-        width: 280px;
     }
 }

@@ -8,5 +8,5 @@ const Loader = props=>{
             <div></div>
         </div>
     )
-}
+};
 export default Loader

@@ -3,24 +3,41 @@ import classes from './Main.css'
 import Input from "../UI/Input/Input";
 import Footer from "../Footer/Footer";
 import Cards from "../Cards/Cards";
+import {connect} from 'react-redux'
+import searchHero from '../../store/actoins/searchHero'
+import {Route, Switch} from 'react-router-dom'
 
 class Main extends React.Component{
     state={
-        inputValue: '',
-    }
-    onChangeInputValue = e =>{
+        inputValue: ''
+    };
+    onInputHandler = e =>{
         this.setState({
             inputValue: e.target.value
         })
-    }
+        this.props.searchHero(e.target.value)
+    };
+    clearInput = ()=>{
+        this.setState({
+            inputValue: ''
+        })
+    };
     render() {
         return(
             <div className={classes.Main}>
-                <Input placeholder={'Имя героя'} onChange={e=>this.onChangeInputValue(e)} value={this.state.inputValue}/>
-                <Cards/>
-                <Footer/>
+                <Input placeholder={'Имя героя'} value={this.state.inputValue} onChange={(e)=>this.onInputHandler(e)} />
+                <Switch>
+                    <Route path='/marvel' render={({...props})=>(<Cards {...props}/>)}/>
+                    <Route path='/dc' render={({...props})=>(<Cards {...props}/>)}/>
+                </Switch>
+                <Footer click={this.clearInput}/>
             </div>
         )
     }
 }
-export default Main
+function mapDispatchToProps(dispatch) {
+    return{
+        searchHero: (name)=>dispatch(searchHero(name))
+    }
+}
+export default connect(null,mapDispatchToProps)(Main)
