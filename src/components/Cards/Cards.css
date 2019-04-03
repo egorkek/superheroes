@@ -1,36 +1,35 @@
+/*.Cards{*/
+/*    !*display: grid;*!*/
+/*    !*grid-template-columns: 1fr 1fr 1fr 1fr;*!*/
+/*    !*overflow: auto;*!*/
+/*    !*height: 80%;*!*/
+/*    !*width: 100vw;*!*/
+/*    !*margin-left: 20px;*!*/
+/*    display: flex;*/
+/*    flex-flow: row wrap;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    overflow: auto;*/
+/*    justify-content: space-between;*/
+/*}*/
+
 .Cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     overflow: auto;
-    height: 80%;
+    height: 100%;
     width: 100%;
-    align-content: flex-start;
-    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 .Cards div{
-    flex: none;
+    width: 25%;
+    display: flex;
+    align-items: center;
 }
-.Cards img{
-    border-radius: 8px;
-    padding: 0;
-    margin-right: 16px;
-}
+
 @media (max-width: 321px) {
     .Cards{
-        height: 190px;
-        margin-bottom: 0;
+        height: 35vh;
     }
-    .Cards div{
-        display: inline;
-    }
-    .Cards img{
-        margin-right: 8px;
-    }
-}
-@media (max-width: 767px) {
-    .Cards{
-        margin-left: 0;
-        justify-items: center;
-        width: 99%;
-    }
+
 }

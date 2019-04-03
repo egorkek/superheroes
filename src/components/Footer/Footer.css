@@ -1,20 +1,25 @@
+/*.Footer{*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-bottom: 10px;*/
+/*    height: 96px;*/
+/*    margin-top: -22px;*/
+/*}*/
 .Footer{
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: absolute;
     bottom: 0;
     left: 0;
-    margin-bottom: 10px;
 }
-.Footer img{
-    opacity: .2;
-    transition: opacity .5s linear;
+
+@media (min-width: 760px) {
+.Footer{
+    position: relative;
 }
-.Footer .active img {
-    opacity: 1;
-}
-@media (max-width: 321px) {
-    .Footer{
-        height: 96px;
-    }
+
 }

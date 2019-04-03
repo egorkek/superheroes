@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import Cards from "../Cards/Cards";
 import {connect} from 'react-redux'
 import searchHero from '../../store/actoins/searchHero'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Redirect, Switch} from 'react-router-dom'
 
 class Main extends React.Component{
     state={
@@ -25,12 +25,20 @@ class Main extends React.Component{
     render() {
         return(
             <div className={classes.Main}>
-                <Input placeholder={'Имя героя'} value={this.state.inputValue} onChange={(e)=>this.onInputHandler(e)} />
-                <Switch>
-                    <Route path='/marvel' render={({...props})=>(<Cards {...props}/>)}/>
-                    <Route path='/dc' render={({...props})=>(<Cards {...props}/>)}/>
-                </Switch>
-                <Footer click={this.clearInput}/>
+                <div className={classes.Inp}>
+                    <Input placeholder={'Имя героя'} value={this.state.inputValue} onChange={(e)=>this.onInputHandler(e)} />
+                </div>
+                <div className={classes.MainCards}>
+                    <Switch>
+                        <Route path='/marvel' render={({...props})=>(<Cards {...props}/>)}/>
+                        <Route path='/dc' render={({...props})=>(<Cards {...props}/>)}/>
+                        <Redirect from='/' to='/dc'/>
+
+                    </Switch>
+                </div>
+                <div className={classes.Foot}>
+                    <Footer click={this.clearInput}/>
+                </div>
             </div>
         )
     }

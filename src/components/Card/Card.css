@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 72px;
     margin-bottom: 16px;
+
 }
 .Card img{
     height: 100px;
@@ -11,14 +12,14 @@
     border-radius: 8px;
 }
 .Card p{
-    margin: 4px;
+    margin-top: 4px;
     padding: 0;
     text-align: center;
     font-size: 12px;
 }
 @media (max-width: 321px) {
     .Card img{
-        width: 72px;
+        width: 64px;
         margin: 0;
     }
 }
