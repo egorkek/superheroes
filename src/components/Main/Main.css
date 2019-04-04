@@ -9,11 +9,11 @@
 @media (min-width: 760px) {
     .Main{
         flex-flow: row wrap;
-        justify-content: flex-start;
     }
     .Main .Inp{
         order: 1;
         width: 50%;
+
 
     }
     .Main .Foot{
@@ -25,6 +25,7 @@
     .Main .MainCards{
         order: 3;
         width: 100%;
+        height: 70%;
     }
     
 }

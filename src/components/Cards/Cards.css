@@ -18,3 +18,16 @@
     }
 
 }
+@media (min-width: 760px){
+    .Cards{
+        justify-content: flex-start;
+        justify-items: start;
+    }
+    .Cards :first-child{
+        margin-left: -6px;
+    }
+    .Cards div{
+        width: 72px;
+
+    }
+}
